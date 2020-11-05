@@ -3,14 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { ProductContext } from "../contexts/ProductContext";
 
 const Navigation = props => {
-	const value = useContext(ProductContext);
+	const cart = useContext(ProductContext);
 	console.log('value below in')
-	console.log(value);
+	console.log(cart);
 	return (
 		<div className="navigation">
 			<NavLink to="/">Products</NavLink>
 			<NavLink to="/cart">
-				Cart <span>{props.cart.length}</span>
+				Cart <span>{cart.length}</span>
 			</NavLink>
 		</div>
 	);
